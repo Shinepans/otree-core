@@ -142,7 +142,7 @@ def get_default_settings(initial_settings=None):
         'STATIC_ROOT': os.path.join(
             initial_settings.get('BASE_DIR', ''),
             '_static_root'),
-        'STATIC_URL': '/static/',
+        'STATIC_URL': '/otree1/static/',
         'STATICFILES_STORAGE': (
             'whitenoise.django.GzipManifestStaticFilesStorage'
         ),

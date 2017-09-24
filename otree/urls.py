@@ -1,5 +1,5 @@
 from otree.extensions import get_extensions_modules, get_extensions_data_export_views
-from django.conf.urls import patterns
+from django.conf.urls import patterns,url,include
 import inspect
 from importlib import import_module
 
@@ -196,4 +196,4 @@ def augment_urlpatterns(urlpatterns):
 
 
 urlpatterns = patterns('',)
-augment_urlpatterns(urlpatterns)
+urlpatterns = patterns('', url(r'^otree1/', include(augment_urlpatterns(urlpatterns))))
