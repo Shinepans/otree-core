@@ -195,7 +195,7 @@ class RoomWithoutSession(CreateSession):
         return super(RoomWithoutSession, self).get_context_data(**kwargs)
 
     def socket_url(self):
-        return '/room_without_session/{}/'.format(self.room.name)
+        return '/otree1/room_without_session/{}/'.format(self.room.name)
 
 
 class RoomWithSession(vanilla.TemplateView):
@@ -281,7 +281,7 @@ class WaitUntilSessionCreated(GenericWaitPageMixin, vanilla.GenericView):
         return self._get_wait_page()
 
     def socket_url(self):
-        return '/wait_for_session/{}/'.format(self._pre_create_id)
+        return '/otree1/wait_for_session/{}/'.format(self._pre_create_id)
 
 
 class SessionSplitScreen(AdminSessionPageMixin, vanilla.TemplateView):

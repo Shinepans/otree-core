@@ -308,7 +308,7 @@ class AssignVisitorToRoom(GenericWaitPageMixin, vanilla.View):
         }
 
     def socket_url(self):
-        return '/wait_for_session_in_room/{}/'.format(
+        return '/otree1/wait_for_session_in_room/{}/'.format(
             self._socket_url_params
         )
 
@@ -449,7 +449,7 @@ class BrowserBotStartLink(GenericWaitPageMixin, vanilla.View):
             return render_to_response("otree/WaitPage.html", ctx)
 
     def socket_url(self):
-        return '/browser_bot_wait/'
+        return '/otree1/browser_bot_wait/'
 
     def redirect_url(self):
         return self.request.get_full_path()

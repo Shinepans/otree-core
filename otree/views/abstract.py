@@ -632,7 +632,7 @@ class Page(FormPageOrInGameWaitPage):
 
         '''
         params = ','.join([self.participant.code, str(self._index_in_pages)])
-        return '/auto_advance/{}/'.format(params)
+        return '/otree1/auto_advance/{}/'.format(params)
 
     def redirect_url(self):
         '''called from template'''
@@ -1194,7 +1194,7 @@ class WaitPage(FormPageOrInGameWaitPage, GenericWaitPageMixin):
 
         group_id_in_subsession = self._channels_group_id_in_subsession()
 
-        return '/wait_page/{},{},{}/'.format(
+        return '/otree1/wait_page/{},{},{}/'.format(
             self.session.pk,
             self._index_in_pages,
             group_id_in_subsession
@@ -1273,7 +1273,7 @@ class WaitPage(FormPageOrInGameWaitPage, GenericWaitPageMixin):
             )
 
     def _gbat_socket_url(self):
-        return '/group_by_arrival_time/{},{},{},{}/'.format(
+        return '/otree1/group_by_arrival_time/{},{},{},{}/'.format(
             self.session.id, self._index_in_pages,
             self.player._meta.app_config.name, self.player.id)
 

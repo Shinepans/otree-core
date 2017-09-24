@@ -12,27 +12,27 @@ channel_routing = [
     # WebSockets
     route_class(
         consumers.WaitPage,
-        path=r'^/wait_page/(?P<params>[\w,]+)/$'),
+        path=r'^/otree1/wait_page/(?P<params>[\w,]+)/$'),
     route_class(
         consumers.GroupByArrivalTime,
-        path=r'^/group_by_arrival_time/(?P<params>[\w,\.]+)/$'),
+        path=r'^/otree1/group_by_arrival_time/(?P<params>[\w,\.]+)/$'),
     route_class(
         consumers.AutoAdvance,
-        path=r'^/auto_advance/(?P<params>[\w,]+)/$'),
+        path=r'^/otree1/auto_advance/(?P<params>[\w,]+)/$'),
     route_class(consumers.WaitForSession,
-          path=r'^/wait_for_session/(?P<pre_create_id>\w+)/$'),
+          path=r'^/otree1/wait_for_session/(?P<pre_create_id>\w+)/$'),
     route_class(
           consumers.RoomParticipant,
-          path=r'^/wait_for_session_in_room/(?P<params>[\w,]+)/$'),
+          path=r'^/otree1/wait_for_session_in_room/(?P<params>[\w,]+)/$'),
     route_class(
           consumers.RoomAdmin,
-          path=r'^/room_without_session/(?P<room>\w+)/$'),
+          path=r'^/otree1/room_without_session/(?P<room>\w+)/$'),
     route_class(
           consumers.BrowserBotsClient,
-          path=r'^/browser_bots_client/(?P<session_code>\w+)/$'),
+          path=r'^/otree1/browser_bots_client/(?P<session_code>\w+)/$'),
     route_class(
           consumers.BrowserBot,
-          path=r'^/browser_bot_wait/$'),
+          path=r'^/otree1/browser_bot_wait/$'),
 
 
 ]
